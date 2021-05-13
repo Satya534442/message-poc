@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { StyledNavBarWrapper,  StyledNavBarList, Wrapper} from './styles';
+import deleteIcon from '../../assets/delete.png';
 import sendIcon from '../../assets/send.png';
 
+
 const CurrentSelectedBar = (props) => {
-  const { data, number: phoneNumber, addNewNumberOrMessage, isAdd } = props;
+  const { data, number: phoneNumber, addNewNumberOrMessage, isAdd, deleteNumberOrMessage } = props;
   const [newNumber, setNewNumber] = useState('');
   const [newMessage, setNewMessage] = useState('');
 
@@ -36,6 +38,9 @@ const CurrentSelectedBar = (props) => {
             <StyledNavBarList isRight={i.type === 'S'} index={index}>
               <div className="message">{i.text}</div>
               <div className="message-date">{new Date(i.date).toGMTString()}</div>
+                <img src={deleteIcon} alt="Delete icon" onClick={() => {
+                  deleteNumberOrMessage(undefined, i.id);
+                }} />
             </StyledNavBarList>
           ))}
         </div>

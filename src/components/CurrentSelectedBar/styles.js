@@ -33,13 +33,13 @@ export const Wrapper = styled.div`
 export const StyledNavBarWrapper = styled.div`
   padding: 20px 12px;
   border-radius: 4px;
-  height: 100%;
+  height: 85%;
   box-sizing: border-box;
 
   .messages-wrapper {
     box-sizing: border-box;
     overflow: scroll;
-    height: 85%;
+    height: 100%;
   }
 
   .messageArea {
@@ -65,7 +65,6 @@ export const StyledNavBarWrapper = styled.div`
 
 const colorsHexCode = [
   "#B6D0E2",
-  "#CCCCFF",
   "#96DED1",
   "#9FE2BF",
   "#87CEEB",
@@ -80,6 +79,7 @@ const colorsHexCode = [
   "#7FFFD4",
   "#C1E1C1",
   "#9FE2BF",
+  "#CCCCFF",
 ];
 
 export const StyledNavBarList = styled.div`
@@ -87,6 +87,14 @@ export const StyledNavBarList = styled.div`
   width: fit-content;
   background: ${props => colorsHexCode[props.index]};
   border-radius: 8px;
+  img {
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+    margin-right: 0;
+    margin-left: auto;
+    display: flex;
+  }
   ${props => props.isRight && `
     text-align: right;
     width: fit-content;

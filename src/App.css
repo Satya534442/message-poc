@@ -1,7 +1,7 @@
 body {
   max-width: 1440px;
   margin: 0 auto;
-  background: #F5F5F5;
+  max-height: 769px;
 }
 
 .App-logo {
@@ -46,12 +46,23 @@ body {
 .sidenav-bar {
   width: 30%;
   margin-right: 30px;
-  background: #FFFFFF;
   height: 100vh;
+  border: 20px solid #ccccff;
+  border-radius: 30px;
+  box-sizing: border-box;
 }
 
 .messageSection {
   width: 70%;
-  background: #FFFFFF;
   height: 100vh;
+  border: 20px solid #ccccff;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.loader {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
